@@ -1,0 +1,59 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/barra_lateral.css">
+    <link rel="stylesheet" href="/css/pop_ups.css">
+    <link rel="stylesheet" href="/css/pops_extras/pops_extra.css">
+
+    <title>Login</title>
+</head>
+<body id="corpo">
+    <div class="container_form">
+        <h1 style="padding: 0.5rem 1rem; text-align: center;">Login</h1>
+        <form action="">
+            <p>Nome de Utilizador:</p>
+            <input type="text" id="txtNome" class="inputs">
+            <p>Palavra Passe:</p>
+            <input type="password" minlength="4" id="txtPassword" class="inputs">
+            <br>
+
+            <div style="margin: auto; width: fit-content; display: flex; gap: 1rem;">
+                <button type="button" class="btn_sub" onclick="AtivarRegisto()">Criar Conta</button>
+                <button type="button" class="btn_sub" onclick="verificarDados()">Iniciar Sessão</button>
+            </div>
+        </form>
+    </div>
+
+    <section class="null_space" style="display: none;"></section>
+
+    <div class="container_registo" style="display: none;">
+        <h1 style="padding: 0.5rem 1rem; text-align: center;">Registo</h1>
+        <form action="">
+            <p>Nome de Utilizador:</p>
+            <input type="text" id="txtNomeCriar" class="inputs" required>
+            <p>Palavra Passe:</p>
+            <input type="password" minlength="4" id="txtPasswordCriar" class="inputs" required>
+            <br>
+
+            <div style="margin: auto; width: fit-content; display: flex; gap: 1rem;">
+                <button type="button" class="btn_sub" onclick="AtivarRegisto()">Cancelar</button>
+                <button type="button" class="btn_sub" onclick="CriarConta()">Criar Conta</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+<script src="scripts/login/cookie.js"></script>
+<script src="scripts/login/ativarRegisto.js"></script>
+<script src="scripts/login/verificarDados.js"></script>
+<script src="scripts/popsExtra/CriarPop.js"></script>

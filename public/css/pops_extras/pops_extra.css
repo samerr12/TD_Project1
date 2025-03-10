@@ -1,0 +1,59 @@
+.popExtras_container_total {
+    padding: 1rem;
+    min-width: 250px;
+    max-width: 450px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 2px 2px 4px black;
+    border-radius: 1rem;
+    z-index: 38;
+}
+    .popExtras_container_head {
+        margin: auto;
+        width: fit-content;
+        display: flex;
+    }
+    .popExtras_container_msg {
+        margin-top: 1rem;
+        display: flex;
+        gap: 0.7rem;
+        align-items: center;
+    }
+        .popExtras_icone {
+            width: 2.5rem;
+        }
+        .popExtras_container_msg p {
+            word-wrap:normal;
+        }
+    .popExtras_container_btns {
+        display: flex;
+    }
+        .btn_popExtras_ok {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            width: 100%;
+            text-align: center;
+            border-style: solid;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .btn_popExtras_ok:active {
+            scale: 0.97;
+            transition: 0.1s;
+        }
+            .Extra_erro {
+                color: #e25858;
+                border-color: #e25858;
+            }
+            .Extra_aviso {
+                color: #FFD43B;
+                border-color: #FFD43B;
+            }
+            .Extra_certo {
+                color: #68c943;
+                border-color: #68c943;
+            }

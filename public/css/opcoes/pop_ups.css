@@ -1,0 +1,90 @@
+.Thead_pop {
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+.container_Pop_inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+    .inputs {
+        background-color: transparent;
+        border-style: solid;
+        border-color: #68c943;
+        padding: 0.2rem 0.5rem;
+    }
+        .input_full {
+            width: calc(100% - 1.3rem);
+        }
+        .input_half {
+            width: calc(50% - 1.75rem);
+        }
+        .input_25 {
+            width: calc(25% - 2rem);
+        }
+    .container_pop_botoes {
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .container_pop_botoes button {
+        padding: 0.2rem 0.5rem;
+        border-style: solid;
+        border-radius: 0.5rem;
+        background-color: transparent;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    .container_pop_botoes button:hover {
+        scale: 1.1;
+    }
+    .container_pop_botoes button:active {
+        scale: 1;
+        transition: 0.1s;
+    }
+        .btn_pop_cancelar {
+            border-color: #e25858;
+            color: #e25858;
+        }
+        .btn_pop_continuar {
+            border-color: #68c943;
+            color: #68c943;
+        }
+
+.pop_CE {
+    padding: 1rem;
+    width: 300px;
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: white;
+    box-shadow: 2px 2px 4px black;
+    border-radius: 1rem;
+    z-index: 37;
+}
+    .CE_XL {
+        width: 400px;
+    }
+    .CE_XXL {
+        width: 450px;
+    }
+    .container_pop_botoes {
+        
+    }
+    .text_Dgeral {
+        margin-top: 0.5rem;
+    }
+
+@media only screen and (max-width: 800px) {
+    .pop_CE {
+        width: 85%;
+    }
+        .CE_XL {
+            width: 85%;
+        }
+        .CE_XXL {
+            width: 85%;
+        }
+}

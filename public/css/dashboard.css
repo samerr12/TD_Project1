@@ -1,0 +1,95 @@
+.container_total {
+    margin: 1rem;
+    padding: 1rem 1rem 2rem;
+    width: calc(100% - 4rem);
+    display: flex;
+    gap: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 10px black;
+}
+    .head_Cabecalho {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .container_linhas {
+        padding: 0.5rem 1rem;
+        display: flex;
+        gap: 1rem;
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+        .container_cartao {
+            padding: 1rem;
+            display: block;
+            min-width: 300px;
+            width: 300px;
+            height: 450px;
+            position: relative;
+            border-radius: 1rem;
+            box-shadow: 2px 2px 5px black;
+        }
+            .head_linha {
+                margin: 0 0 1rem 0;
+                text-align: center;
+                border-style: solid;
+                border-color: #64d2a6;
+                border-radius: 3rem;
+            }
+            .info_head_equipa {
+                display: flex;
+            }
+            .barra_divisoria_cartao {
+                margin: 0.5rem 0;
+                width: 100%;
+                border-style: none;
+                background-color: #64d2a6;
+                height: 3px;
+            }
+            .container_Nfunc {
+                padding-left: 0.5rem;
+            }
+                .link_funcionario {
+                    width: fit-content;
+                    display: block;
+                    text-decoration: none;
+                    color: black;
+                    transition: 0.2s;
+                }
+                .link_funcionario:hover {
+                    color: #68c943;
+                }
+            .head_turnos {
+                margin-top: auto;
+                width: calc(100% - 2rem);
+                bottom: 1rem;
+                position: absolute;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+@media only screen and (max-width: 800px) {
+
+    .container_total {
+        padding: 1rem 1rem 0.5rem 1rem;
+        height: 100%;
+    }
+        .head_Cabecalho h1 {
+            font-size: 1.5em;
+        }
+        .container_linhas { 
+            padding: 0.5rem;
+            padding-bottom: 1rem;
+        }
+            .container_cartao {
+                width: 100%;
+                min-width: 90%;
+            }
+
+}

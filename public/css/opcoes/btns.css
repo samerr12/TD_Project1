@@ -1,0 +1,30 @@
+.btnOP {
+    padding: 0.2rem 0.5rem;
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+    border-style: solid;
+    border-radius: 0.5rem;
+    transition: 0.2s;
+    justify-content: center;
+    cursor: pointer;
+}
+.btnOP:hover {
+    scale: 1.05;
+}
+.btnOP:active {
+    scale: 0.985;
+    transition: 0.1s;
+}
+    .btnCreate {
+        border-color: #68c943;
+        color: #68c943;
+    }
+    .btnEdit {
+        border-color: #64d2a6;
+        color: #64d2a6;
+    }
+    .btnDelete {
+        border-color: #e25858;
+        color: #e25858;
+    }

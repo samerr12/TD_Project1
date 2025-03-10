@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/barra_lateral.css">
+    <link rel="stylesheet" href="../css/opcoes/opcoes.css">
+    <link rel="stylesheet" href="../css/opcoes/btns.css">
+    <link rel="stylesheet" href="../css/opcoes/pop_ups.css">
+    <link rel="stylesheet" href="../css/pops_extras/pops_extra.css">
+    <script src="../scripts/login/cookie.js"></script>
+    <script>redirecionarSessoes();</script>
+
+    <title>Opções</title>
+</head>
+<body id="corpo">
+    <nav>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="hamburgao">
+            <path fill="#ffffff" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
+        </svg>
+        <a href="../index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="hamburgao saida">
+                <path fill="#ffffff" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 192 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"/>
+            </svg>
+        </a>
+    </nav>
+
+    <div>
+        <div class="container_seccao">
+            <div class="container_selecao">
+                <div class="head_seleccao">
+                    <div style="display: flex; gap: 0.5rem">
+                        <h1>Linhas</h1>
+                        <!--
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 1.5rem;">
+                            <path fill="#68c943" d="M3.9 54.9C10.5 40.9 24.5 32 40 32l432 0c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9 320 448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6l0-79.1L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"/>
+                        </svg>
+                        -->
+                    </div>
+                    <div class="btnOP btnCreate" onclick="pop_Clinha()">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 1rem;">
+                            <path fill="#68c943" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/>
+                        </svg>
+                        Adicionar
+                    </div>
+                </div>
+                <div class="container_combo">
+                    <select name="" id="cbbLinhasMain" class="wombocombo">
+                        <option value="" disabled selected>Escolha uma Linha</option>
+                    </select>
+                </div>
+            </div>
+            <div class="container_informacao no_select" id="container_informacaoLinha">
+                <div class="head_informacao no_select_head" id="head_informacaoLinha">
+                    <h1 id="Display_NomeLinha" class="no_select_txt">Escolha uma Linha</h1>
+                    <div class="container_btns_op no_select_btns" id="container_btnsLinha">
+                        <div class="btnOP btnEdit" onclick="pop_Elinha()">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 1rem;">
+                                <path fill="#64d2a6" d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1 0 32c0 8.8 7.2 16 16 16l32 0zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"/>
+                            </svg>
+                            Atualizar
+                        </div>
+                        <div class="btnOP btnDelete" onclick="pop_Dgeral('linha')">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 1rem;">
+                                <path fill="#e25858" d="M135.2 17.7C140.6 6.8 151.7 0 163.8 0L284.2 0c12.1 0 23.2 6.8 28.6 17.7L320 32l96 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 96C14.3 96 0 81.7 0 64S14.3 32 32 32l96 0 7.2-14.3zM32 128l384 0 0 320c0 35.3-28.7 64-64 64L96 512c-35.3 0-64-28.7-64-64l0-320zm96 64c-8.8 0-16 7.2-16 16l0 224c0 8.8 7.2 16 16 16s16-7.2 16-16l0-224c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16l0 224c0 8.8 7.2 16 16 16s16-7.2 16-16l0-224c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16l0 224c0 8.8 7.2 16 16 16s16-7.2 16-16l0-224c0-8.8-7.2-16-16-16z"/>
+                            </svg>
+                            Eliminar
+                        </div>
+                    </div>
+                </div>
+                <div id="content_linha" style="margin-top: 0.5rem;">
+                </div>
+            </div>
+        </div>
+        <div class="container_seccao">
+            <div class="container_selecao">
+                <div class="head_seleccao">
+                    <div style="display: flex; gap: 0.5rem">
+                        <h1>Turnos</h1>
+                        <!--
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 1.5rem;">
+                            <path fill="#68c943" d="M3.9 54.9C10.5 40.9 24.5 32 40 32l432 0c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9 320 448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6l0-79.1L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"/>
+                        </svg>
+                        -->
+                    </div>
+                    <div class="btnOP btnCreate" onclick="pop_Cturno()">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 1rem;">
+                            <path fill="#68c943" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/>
+                        </svg>
+                        Adicionar
+                    </div>
+                </div>
+                <div class="container_combo">
+                    <select name="" id="cbbTurnosMain" class="wombocombo">
+                        <option value="" disabled selected>Escolha um Turno</option>
+                    </select>
+                </div>
+            </div>
+            <div class="container_informacao no_select" id="container_informacaoTurno">
+                <div class="head_informacao no_select_head" id="head_informacaoTurno">
+                    <h1 id="Display_NomeTurno" class="no_select_txt">Escolha um Turno</h1>
+                    <div class="container_btns_op no_select_btns" id="container_btnsTurno">
+                        <div class="btnOP btnEdit" onclick="pop_Eturno()">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 1rem;">
+                                <path fill="#64d2a6" d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1 0 32c0 8.8 7.2 16 16 16l32 0zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"/>
+                            </svg>
+                            Atualizar
+                        </div>
+                        <div class="btnOP btnDelete" onclick="pop_Dgeral('turno')">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 1rem;">
+                                <path fill="#e25858" d="M135.2 17.7C140.6 6.8 151.7 0 163.8 0L284.2 0c12.1 0 23.2 6.8 28.6 17.7L320 32l96 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 96C14.3 96 0 81.7 0 64S14.3 32 32 32l96 0 7.2-14.3zM32 128l384 0 0 320c0 35.3-28.7 64-64 64L96 512c-35.3 0-64-28.7-64-64l0-320zm96 64c-8.8 0-16 7.2-16 16l0 224c0 8.8 7.2 16 16 16s16-7.2 16-16l0-224c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16l0 224c0 8.8 7.2 16 16 16s16-7.2 16-16l0-224c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16l0 224c0 8.8 7.2 16 16 16s16-7.2 16-16l0-224c0-8.8-7.2-16-16-16z"/>
+                            </svg>
+                            Eliminar
+                        </div>
+                    </div>
+                </div>
+                <div id="content_turno" style="margin-top: 0.5rem;">
+                </div>
+            </div>
+        </div>
+        <div class="container_seccao">
+            <div class="container_selecao">
+                <div class="head_seleccao">
+                    <div style="display: flex; gap: 0.5rem">
+                        <h1>Equipas</h1>
+                        <!--
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 1.5rem;">
+                            <path fill="#68c943" d="M3.9 54.9C10.5 40.9 24.5 32 40 32l432 0c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9 320 448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6l0-79.1L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"/>
+                        </svg>
+                        -->
+                    </div>
+                    <div class="btnOP btnCreate" onclick="pop_Cequipa()">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 1rem;">
+                            <path fill="#68c943" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/>
+                        </svg>
+                        Adicionar
+                    </div>
+                </div>
+                <div class="container_combo">
+                    <select name="" id="cbbEquipasMain" class="wombocombo">
+                        <option value="" disabled selected>Escolha uma Equipa</option>
+                    </select>
+                </div>
+            </div>
+            <div class="container_informacao no_select" id="container_informacaoEquipa">
+                <div class="head_informacao no_select_head" id="head_informacaoEquipa">
+                    <h1 id="Display_NomeEquipa" class="no_select_txt">Escolha uma Equipa</h1>
+                    <div class="container_btns_op no_select_btns" id="container_btnsEquipa">
+                        <div class="btnOP btnEdit" onclick="pop_Eequipa()">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 1rem;">
+                                <path fill="#64d2a6" d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1 0 32c0 8.8 7.2 16 16 16l32 0zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"/>
+                            </svg>
+                            Atualizar
+                        </div>
+                        <div class="btnOP btnDelete" onclick="pop_Dgeral('equipa')">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 1rem;">
+                                <path fill="#e25858" d="M135.2 17.7C140.6 6.8 151.7 0 163.8 0L284.2 0c12.1 0 23.2 6.8 28.6 17.7L320 32l96 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 96C14.3 96 0 81.7 0 64S14.3 32 32 32l96 0 7.2-14.3zM32 128l384 0 0 320c0 35.3-28.7 64-64 64L96 512c-35.3 0-64-28.7-64-64l0-320zm96 64c-8.8 0-16 7.2-16 16l0 224c0 8.8 7.2 16 16 16s16-7.2 16-16l0-224c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16l0 224c0 8.8 7.2 16 16 16s16-7.2 16-16l0-224c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16l0 224c0 8.8 7.2 16 16 16s16-7.2 16-16l0-224c0-8.8-7.2-16-16-16z"/>
+                            </svg>
+                            Eliminar
+                        </div>
+                    </div>
+                </div>
+                <div id="content_equipa" style="margin-top: 0.5rem;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="barra_lateral" style="left: -100px; box-shadow: none;">
+        <div class="item_barraL" onclick="barraL()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="seta_voltar">
+                <path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+            </svg>
+        </div>
+        <div class="item_barraL">
+            <div class="item_barraL" style="width: 100%;">
+                <a href="dashboard.html" style="margin: auto;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="outros_iconesL">
+                        <path fill="#ffffff" d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="item_barraL" style="width: 100%;">
+                <a href="funcionarios.html" style="margin: auto;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="outros_iconesL">
+                        <path fill="#ffffff" d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3zM609.3 512l-137.8 0c5.4-9.4 8.6-20.3 8.6-32l0-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2l61.4 0C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="item_barraL" style="width: 100%;">
+                <a href="opcoes.html" style="margin: auto;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="outros_iconesL">
+                        <path fill="#ffffff" d="M192 0c-41.8 0-77.4 26.7-90.5 64L64 64C28.7 64 0 92.7 0 128L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64l-37.5 0C269.4 26.7 233.8 0 192 0zm0 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM112 192l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section class="null_space" style="display: none;"></section>
+
+    <div id="pop_Clinha" class="pop_CE" style="display: none;">
+        <h2 class="Thead_pop" style="text-align: center;">Criação da Linha</h2>
+        <form action="">
+            <input type="text" id="Clinha_txtNomeLinha" class="inputs input_full" placeholder="Nome da Linha" required>
+            <div class="container_pop_botoes">
+                <div>
+                    <button type="button" class="btn_pop_cancelar" onclick="pop_Clinha()">Cancelar</button>
+                </div>
+                <div>
+                    <button type="button" class="btn_pop_continuar" onclick="createLinha()">Criar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="pop_Elinha" class="pop_CE" style="display: none;">
+        <h2 class="Thead_pop" style="text-align: center;">Edição da Linha</h2>
+        <form action="">
+            <input type="text" id="Elinha_txtNomeLinha" class="inputs input_full" placeholder="Nome da Linha">
+            <div class="container_pop_botoes">
+                <div>
+                    <button type="button" class="btn_pop_cancelar" onclick="pop_Elinha()">Cancelar</button>
+                </div>
+                <div>
+                    <button type="button" class="btn_pop_continuar" onclick="updateLinha()">Guardar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="pop_Cturno" class="pop_CE CE_XL" style="display: none;">
+        <h2 class="Thead_pop" style="text-align: center;">Criação de Turno</h2>
+        <form action="">
+            <div class="container_Pop_inputs">
+                <input type="text" id="Cturno_txtNomeTurno" class="inputs input_full" placeholder="Nome do Turno">
+                <input type="time" id="txtDataInicio" class="inputs input_half" style="text-align: center;">
+                <input type="time" id="txtDataFim" class="inputs input_half" style="text-align: center;">
+                <select name="cbbNomeLinhaC" id="cbbNomeLinhaC" class="inputs input_full" style="width: 100%;">
+                    <option value="0" selected>Escolha uma Linha</option>
+                </select>
+            </div>
+            <div class="container_pop_botoes">
+                <div>
+                    <button type="button" class="btn_pop_cancelar" onclick="pop_Cturno()">Cancelar</button>
+                </div>
+                <div>
+                    <button type="button" class="btn_pop_continuar" onclick="createTurno()">Criar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="pop_Eturno" class="pop_CE CE_XL" style="display: none;">
+        <h2 class="Thead_pop" style="text-align: center;">Edição de Turno</h2>
+        <form action="">
+            <div class="container_Pop_inputs">
+                <input type="text" class="inputs input_full" placeholder="Nome do Turno">
+                <input type="time" class="inputs input_half" style="text-align: center;">
+                <input type="time" class="inputs input_half" style="text-align: center;">
+                <select name="cbbNomeLinhaE" id="cbbNomeLinhaE" class="inputs input_full" style="width: 100%;">
+                    <option value="0">Escolha uma Linha</option>
+                </select>
+            </div>
+            <div class="container_pop_botoes">
+                <div>
+                    <button type="button" class="btn_pop_cancelar" onclick="pop_Eturno()">Cancelar</button>
+                </div>
+                <div>
+                    <button type="button" class="btn_pop_continuar" onclick="updateTurno()">Guardar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="pop_Cequipa" class="pop_CE CE_XL" style="display: none;">
+        <h2 class="Thead_pop" style="text-align: center;">Criação de Equipa</h2>
+        <form action="">
+            <div class="container_Pop_inputs">
+                <input type="text" class="inputs input_full" placeholder="Nome da Equipa">
+                <select name="" id="" class="inputs input_full" style="width: calc(50% - 0.5rem);">
+                    <option value="" selected>Escolha um turno</option>
+                </select>
+                <input type="time" class="inputs input_25" style="border-color: gainsboro; text-align: center;" disabled>
+                <input type="time" class="inputs input_25" style="border-color: gainsboro; text-align: center;" disabled>
+                <input type="text" class="inputs input_full" placeholder="Linha associada" style="border-color: gainsboro;" disabled>
+            </div>
+            <div class="container_pop_botoes">
+                <div>
+                    <button type="button" class="btn_pop_cancelar" onclick="pop_Cequipa()">Cancelar</button>
+                </div>
+                <div>
+                    <button type="button" class="btn_pop_continuar" onclick="createEquipa()">Criar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="pop_Eequipa" class="pop_CE CE_XL" style="display: none;">
+        <h2 class="Thead_pop" style="text-align: center;">Edição de Equipa</h2>
+        <form action="">
+            <div class="container_Pop_inputs">
+                <input type="text" class="inputs input_full" placeholder="Nome da Equipa">
+                <select name="" id="" class="inputs input_full" style="width: calc(50% - 0.5rem);">
+                    <option value="">Escolha um turno</option>
+                </select>
+                <input type="time" class="inputs input_25" style="border-color: gainsboro; text-align: center;" disabled>
+                <input type="time" class="inputs input_25" style="border-color: gainsboro; text-align: center;" disabled>
+                <input type="text" class="inputs input_full" placeholder="Linha associada" style="border-color: gainsboro;" disabled>
+            </div>
+            <div class="container_pop_botoes">
+                <div>
+                    <button type="button" class="btn_pop_cancelar" onclick="pop_Eequipa()">Cancelar</button>
+                </div>
+                <div>
+                    <button type="button" class="btn_pop_continuar" onclick="updateEquipa()">Criar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+    <script src="../scripts/opcoes/showLinhas.js"></script>
+    <script src="../scripts/opcoes/showTurnos.js"></script>
+    <script src="../scripts/opcoes/showEquipas.js"></script>
+    <script src="../scripts/opcoes/showPops.js"></script>
+    <script src="../scripts/opcoes/CUD_Linha.js"></script>
+    <script src="../scripts/opcoes/CUD_Turno.js"></script>
+    <script src="../scripts/opcoes/CUD_Equipa.js"></script>
+    <script src="../scripts/nav_down.js"></script>
+
+    <script>readLinha();</script>
+
+</html>

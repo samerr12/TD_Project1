@@ -1,0 +1,55 @@
+body {
+    background-color:  #89ddaa;
+}
+.container_form {
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    background-color: white;
+    box-shadow: 2px 2px 4px black;
+    border-radius: 1rem;
+}
+    form {
+        margin: auto;
+        padding: 0 0 1.5rem 0;
+        width: fit-content;
+        display: block;
+    }
+        p {
+            text-align: center;
+            margin-top: 0.8rem;
+            margin-bottom: 0.2rem;
+        }
+        .btn_sub {
+            margin-top: 1rem;
+            padding: 0.2rem 0.5rem;
+            background-color: transparent;
+            border-style: solid;
+            border-color: #68c943;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .btn_sub:hover {
+            scale: 1.05;
+        }
+        a {
+            margin-top: 1rem;
+            text-decoration: none;
+            color: #68c943;
+        }
+
+.container_registo {
+    padding: 1rem 2rem;
+    width: fit-content;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 2px 2px 4px black;
+    border-radius: 1rem;
+    z-index: 37;
+}

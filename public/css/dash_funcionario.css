@@ -1,0 +1,171 @@
+.container_total {
+    margin-left: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.container_info_pessoa {
+    margin: 1rem 0;
+    padding: 0.5rem 1rem 1rem 0.5rem;
+    width: calc(100% - 500px - 5rem);
+    box-shadow: 2px 2px 4px black;
+    border-radius: 1rem;
+}
+    .head_info_pessoa {
+        margin: 0.25rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+.conjunto_pessoas {
+    margin: 1rem 1rem 1rem auto;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+    .container_selects {
+        padding: 0.5rem 1rem 1rem 0.5rem;
+        width: 500px;
+        position: relative;
+        box-shadow: 2px 2px 4px black;
+        border-radius: 1rem;
+    }
+        .iconePesquisa {
+            width: 1.7rem;
+            top: 1rem;
+            right: 1rem;
+            position: absolute;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .iconePesquisa:hover {
+            scale: 1.2;
+        }
+        .iconePesquisa:active {
+            scale: 0.985;
+            transition: 0.1s;
+        }
+        .container_selects_daima {
+            display: flex;
+            gap: 1rem;
+        }
+            .mini_select {
+                display: block;
+                width: calc(50% - 0.5rem);
+            }
+        .btn_VTodos {
+            margin: 1rem auto 0 auto;
+            width: calc(100% - 4rem);
+            display: flex;
+            justify-content: center;
+            color: #68c943;
+            border-color: #68c943;
+        }
+        .combo_equipas {
+            width: 100%;
+            background-color: transparent;
+            border-style: solid;
+            border-color: #68c943;
+            padding: 0.2rem 0.5rem;
+        }
+    .container_Lusers {
+        padding: 0.5rem 1rem 1rem 0.5rem;
+        width: 500px;
+        box-shadow: 2px 2px 4px black;
+        border-radius: 1rem;
+    }
+        .head_Lusers {
+            margin: 0.25rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .btnOP {
+            padding: 0.2rem 0.5rem;
+            display: flex;
+            gap: 0.2rem;
+            align-items: center;
+            border-style: solid;
+            border-radius: 0.5rem;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+        .btnOP:hover {
+            scale: 1.05;
+        }
+        .btnOP:active {
+            scale: 0.985;
+            transition: 0.1s;
+        }
+            .Cuser {
+                border-color: #68c943;
+                color: #68c943;
+            }
+            .Uuser {
+                border-color: #64d2a6;
+                color: #64d2a6;
+            }
+            .Duser {
+                border-color: #e25858;
+                color: #e25858;
+            }
+        .list_users {
+            display: block;
+            max-height: 520px;
+            overflow-y: auto;
+        }
+            .item_user {
+                padding: 0.1rem 0 0.1rem 0.5rem;
+                width: fit-content;
+                display: flex;
+                cursor: pointer;
+                transition: 0.2s;
+            }
+            .item_user:hover {
+                color: #68c943;
+            }
+            .item_user:active {
+                scale: 0.985;
+                transition: 0.1s;
+            }
+                .nome_utilizador {
+                    margin-left: 0.2rem;
+                }
+
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    .container_info_pessoa {
+        width: 90%;
+        margin-bottom: 0;
+        padding-right: 0.5rem;
+    }
+        .head_info_pessoa {
+            gap: 0.2rem;
+            margin-bottom: 0.5rem;
+        }
+    .container_selects {
+        padding: 0.5rem 1rem 1rem 0.5rem;
+        width: 95%;
+        box-shadow: 2px 2px 4px black;
+        border-radius: 1rem;
+    }
+        .container_selects_daima {
+            display: block;
+        }
+            .mini_select {
+                display: block;
+                width: 100%;
+            }
+    .container_Lusers {
+        width: 95%;
+    }
+        .head_Lusers {
+            gap: 0.2rem;
+            margin-bottom: 0.5rem;
+        }
+}
